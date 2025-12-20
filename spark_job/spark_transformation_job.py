@@ -1,4 +1,4 @@
-import argparse
+import argparse 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, count, avg, when, lit, expr
 import logging
@@ -22,7 +22,7 @@ def main(env, bq_project, bq_dataset, transformed_table, route_insights_table, o
         logger.info("Spark session initialized.")
 
         # Resolve GCS path based on the environment
-        input_path = f"gs://airflow-projetcs-gds/airflow-project-1/source-{env}"
+        input_path = f"gs://airflow-project-flight_booking_data/airflow-project-1/source-{env}"
         logger.info(f"Input path resolved: {input_path}")
 
         # Read the data from GCS
