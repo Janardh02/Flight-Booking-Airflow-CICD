@@ -21,7 +21,7 @@ with DAG(
     schedule_interval=None,  # Trigger manually or on-demand
     catchup=False,
 ) as dag:
-
+ 
     # Fetch environment variables
     env = Variable.get("env", default_var="dev")
     gcs_bucket = Variable.get("gcs_bucket", default_var="airflow-project-flight_booking_data")
@@ -74,7 +74,7 @@ with DAG(
             }
         },
     }
-
+ 
     pyspark_task = DataprocCreateBatchOperator(
         task_id="run_spark_job_on_dataproc_serverless",
         batch=batch_details,
