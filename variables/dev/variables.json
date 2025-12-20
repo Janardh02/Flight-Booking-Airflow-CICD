@@ -1,7 +1,7 @@
 {
   "env": "dev",
   "gcs_bucket": "airflow-project-flight_booking_data",
-  "bq_project": "electric-totem-476812-e6 ",
+  "bq_project": "electric-totem-476812-e6",
   "bq_dataset": "flight_data_dev",
   "tables": {
     "transformed_table": "transformed_flight_data_dev",
